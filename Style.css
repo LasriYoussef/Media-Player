@@ -1,0 +1,191 @@
+/* Global Styles */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    /* Définit la police de caractères globale */
+    background-color: #10202d;
+    /* Définit la couleur de fond de la page */
+    margin: 0;
+    /* Supprime les marges par défaut */
+    padding: 0;
+    /* Supprime le padding par défaut */
+}
+
+#header {
+    display: flex;
+    /* Utilise Flexbox pour disposer les éléments en ligne */
+    justify-content: space-between;
+    /* Répartit l'espace disponible entre les éléments */
+    align-items: center;
+    /* Aligne les éléments verticalement au centre */
+    background-color: #446378;
+    /* Couleur de fond de l'en-tête */
+    padding: 20px;
+    /* Ajoute du padding autour de l'en-tête */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Ajoute une ombre sous l'en-tête */
+}
+
+#playController button,
+/* Style pour les boutons des contrôles de lecture */
+#volumeControls button {
+    background: none;
+    /* Supprime le fond par défaut des boutons */
+    border: none;
+    /* Supprime la bordure par défaut des boutons */
+    cursor: pointer;
+    /* Change le curseur en pointeur pour indiquer que c'est cliquable */
+}
+
+#volumeSlider {
+    width: 100px;
+    /* Largeur du curseur de volume */
+    margin: 10px;
+    /* Marge autour du curseur de volume */
+}
+
+#trackSlider {
+    width: 200px;
+    /* Largeur du curseur de la piste */
+}
+
+#trackInfo {
+    display: flex;
+    /* Utilise Flexbox pour la disposition */
+    flex-direction: column;
+    /* Aligne les éléments verticalement */
+    align-items: center;
+    /* Centre les éléments horizontalement */
+    text-align: center;
+    /* Centre le texte */
+    font-size: 21px;
+    /* Taille de la police pour les informations de piste */
+}
+
+#artistName,
+/* Style pour le nom de l'artiste */
+#trackTitle {
+    margin: 2px;
+    /* Marge autour du texte */
+    filter: blur(2px);
+    /* Effet de flou sur le texte (à revoir selon l'utilité) */
+}
+
+.search-container {
+    display: flex;
+    /* Utilise Flexbox pour la disposition */
+    align-items: center;
+    /* Centre les éléments verticalement */
+}
+
+#searchInput {
+    padding: 5px;
+    /* Ajoute du padding à l'intérieur du champ de recherche */
+    border: 1px solid #ccc;
+    /* Ajoute une bordure grise autour du champ */
+    border-radius: 5px;
+    /* Arrondit les coins du champ */
+    margin-left: 5px;
+    /* Ajoute une marge à gauche du champ de recherche */
+}
+
+/* Main Grid Layout */
+main {
+    display: flex;
+    /* Utilise Flexbox pour la disposition */
+    margin: 20px;
+    /* Ajoute une marge autour de la section principale */
+    justify-items: stretch;
+    /* Assure que les éléments s'étirent pour remplir l'espace */
+}
+
+.grid-container {
+    display: grid;
+    /* Utilise Flexbox pour la disposition */
+    flex-direction: column;
+    /* Aligne les éléments de la grille verticalement sur les petits écrans */
+}
+
+#gridTable button {
+    width: 130px;
+    /* Largeur des boutons de menu */
+    padding: 12px;
+    /* Ajoute du padding autour du texte des boutons */
+    margin-right: 50px;
+    /* Ajoute une marge à droite des boutons */
+    cursor: pointer;
+    /* Change le curseur en pointeur */
+    background-color: #f4f4f4;
+    /* Couleur de fond des boutons */
+    text-align: start;
+    /* Aligne le texte à gauche */
+    border: 1px solid #ddd;
+    /* Bordure grise claire autour des boutons */
+    border-radius: 3px;
+    /* Arrondit les coins des boutons */
+    transition: background-color 0.3s ease;
+    /* Ajoute une transition pour le changement de couleur de fond */
+}
+
+#musicCover {
+    display: grid;
+    /* Utilise une grille pour disposer les éléments */
+    grid-template-columns: repeat(4, 1fr);
+    /* Crée 4 colonnes égales */
+    gap: 20px;
+    /* Espace entre les éléments de la grille */
+}
+
+.cover {
+    background-color: #fff;
+    /* Fond blanc pour chaque couverture */
+    padding: 10px;
+    /* Ajoute du padding autour du contenu */
+    text-align: center;
+    /* Centre le texte à l'intérieur */
+    border-radius: 10px;
+    /* Arrondit les coins des couvertures */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Ajoute une ombre autour des couvertures */
+    transition: transform 0.3s ease;
+    /* Transition pour l'effet de transformation (agrandissement au survol) */
+    filter: blur(2px);
+    /* Effet de flou sur l'image (à revoir selon l'utilité) */
+}
+
+.cover img {
+    width: 100%;
+    /* Largeur de l'image à 100% de son conteneur */
+    border-radius: 10px;
+    /* Arrondit les coins de l'image */
+    margin-bottom: 10px;
+    /* Ajoute une marge en bas de l'image */
+    filter: blur(6px);
+    /* Effet de flou sur l'image (à revoir selon l'utilité) */
+}
+
+.cover h2 {
+    margin: 10px 0;
+    /* Marge en haut et en bas des titres */
+    font-size: 1.2em;
+    /* Taille de la police pour les titres */
+}
+
+.cover:hover {
+    transform: scale(1.05);
+    /* Agrandit légèrement la couverture au survol */
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    #musicCover {
+        grid-template-columns: repeat(3, 1fr);
+        /* Change la grille en une seule colonne pour les écrans moyens */
+    }
+}
+
+@media (max-width: 768px) {
+    #musicCover {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
