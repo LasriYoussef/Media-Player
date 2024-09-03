@@ -23,6 +23,8 @@ body {
     /* Ajoute du padding autour de l'en-tête */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     /* Ajoute une ombre sous l'en-tête */
+    flex-wrap: wrap;
+    
 }
 
 #playController button,
@@ -175,17 +177,50 @@ main {
     /* Agrandit légèrement la couverture au survol */
 }
 
-/* Responsive Design */
-@media (max-width: 992px) {
+
+/* Responsive design */
+/* 992px and up - 4 columns */
+@media (min-width: 992px) {
     #musicCover {
-        grid-template-columns: repeat(3, 1fr);
-        /* Change la grille en une seule colonne pour les écrans moyens */
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
-@media (max-width: 768px) {
+/* 768px to 991px - 3 columns */
+@media (max-width: 991px) {
+    #musicCover {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+/* 481px to 767px - 2 columns */
+@media (max-width: 767px) {
     #musicCover {
         grid-template-columns: repeat(2, 1fr);
     }
+    #header {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+    .search-container {
+        margin-top: 10px;
+    }
+}
 
+/* 480px and below - 1 column */
+@media (max-width: 480px) {
+    #musicCover {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    #header {
+        flex-direction: column;
+    }
+    
+    .search-container {
+        margin-top: 10px;
+    }
 }

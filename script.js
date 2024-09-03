@@ -8,49 +8,49 @@ document.addEventListener("DOMContentLoaded", function () {
         {
             title: "Dream", // Titre de la première piste
             artist: "El Debarge", // Artiste de la première piste
-            src: "El Debarge A Dream.mp3" // Chemin vers le fichier audio de la première piste
+            src: "El-Debarge-A-Dream.mp3" // Chemin vers le fichier audio de la première piste
         },
         {
             title: "Cherish",
-            artist: "Kool and The Gang",
-            src: "Kool and The Gang  Cherish.mp3"
+            artist: "Kool and The-Gang",
+            src: "Musique/Kool-and-The-Gang-Cherish.mp3"
         },
         {
             title: "End of the road",
             artist: "Boyz II Men",
-            src: "Boyz II Men  End Of The Road.mp3"
+            src: "Musique/Boyz-II-Men-End-Of-The-Road.mp3"
         },
         {
             title: "Fragil",
             artist: "Sting feat Stevie Wonder",
-            src: "Sting feat Stevie Wonder Fragil.mp3"
+            src: "Musique/Sting-feat-Stevie-Wonder-Fragil.mp3"
         },
         {
             title: "Back at one",
             artist: "Brian McKnight",
-            src: "Brian McKnight  Back At One.mp3"
+            src: "Musique/Brian-McKnight-Back-At-One.mp3"
         },
         {
             title: "You are the one",
             artist: "D Train",
-            src: "D Train  Youre the One for Me.mp3"
+            src: "Musique/D-Train-Youre-the-One-for-Me.mp3"
         },
         {
             title: "Joanna",
             artist: "Kool and The Gang",
-            src: "Kool  The Gang  Joanna Official Music Video.mp3"
+            src: "Musique/Kool-The-Gang-Joanna.mp3"
         },
         {
             title: "Dance with my father",
             artist: "Luther Vandross",
-            src: "Luther Vandross  Dance With My Father.mp3"
+            src: "Musique/Luther-Vandross-Dance-With-My-Father.mp3"
         },
 
         // Ajoutez ici d'autres pistes si nécessaire
     ];
 
     // Création d'un nouvel objet Audio pour lire la piste actuelle
-    const audio = new Audio(tracks[currentTrackIndex].src);
+    const audio = new Audio("Musique/" + tracks[currentTrackIndex].src);
     
     // Sélection des éléments HTML pour manipuler le DOM
     const trackTitle = document.getElementById("trackTitle"); // Élément pour afficher le titre de la piste
@@ -80,10 +80,10 @@ document.addEventListener("DOMContentLoaded", function () {
     playButton.addEventListener("click", function () {
         if (isPlaying) { // Si une piste est en cours de lecture
             audio.pause(); // Mettre la piste en pause
-            playButton.innerHTML = '<img src="play-circle.svg" alt="play-circle" width="65" height="25">'; // Change l'icône du bouton en lecture
+            playButton.innerHTML = '<img src="img/Bouttons/play-circle.svg" alt="play-circle" width="65" height="25">'; // Change l'icône du bouton en lecture
         } else { // Si aucune piste n'est en cours de lecture
             audio.play(); // Démarre la lecture de la piste
-            playButton.innerHTML = '<img src="pause-circle.svg" alt="pause-circle" width="65" height="25">'; // Change l'icône du bouton en pause
+            playButton.innerHTML = '<img src="img/Bouttons/pause-circle.svg" alt="pause-circle" width="65" height="25">'; // Change l'icône du bouton en pause
         }
         isPlaying = !isPlaying; // Inverse l'état de lecture
     });
@@ -156,7 +156,7 @@ document.addEventListener("DOMContentLoaded", function () {
             updateTrackInfo(); // Met à jour les informations de la piste
             audio.play(); // Lance la lecture de la piste
             isPlaying = true; // Met à jour l'état de lecture
-            playButton.innerHTML = '<img src="pause-circle.svg" alt="pause-circle" width="65" height="25">'; // Change le bouton en pause
+            playButton.innerHTML = '<img src="img/Bouttons/pause-circle.svg" alt="pause-circle" width="65" height="25">'; // Change le bouton en pause
         });
     });
 

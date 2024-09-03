@@ -12,8 +12,8 @@
 <body> <!-- Ouvre le corps de la page où le contenu visible sera placé -->
     <header id="header"> <!-- Section d'en-tête de la page -->
         <section class="mediaPlayerGeneral" id="mediaPlayerGeneral"> <!-- Conteneur principal pour le lecteur de musique -->
-            <section id="playController"> <!-- Contient les contrôles de lecture -->
-                <section class="slider-container" id="slider-container"> <!-- Conteneur pour les boutons de navigation de piste -->
+            <div id="playController"> <!-- Contient les contrôles de lecture -->
+                <div class="slider-container" id="slider-container"> <!-- Conteneur pour les boutons de navigation de piste -->
                     <button type="button" id="btnPrevious">
                         <img src="img/Bouttons/left-arrow.svg" alt="left-arrow" width="25" height="25"> <!-- Bouton pour passer à la piste précédente -->
                     </button>
@@ -23,19 +23,19 @@
                     <button type="button" id="btnNext">
                         <img src="img/Bouttons/right-arrow.svg" alt="right-arrow" width="30" height="25"> <!-- Bouton pour passer à la piste suivante -->
                     </button>
-                </section>
-                <section id="volumeControls"> <!-- Section pour les contrôles de volume -->
+                </div>
+                <div id="volumeControls"> <!-- Section pour les contrôles de volume -->
                     <article>
                         <button type="button" id="btnVolumeDown">
-                        <img src="img/Bouttons/V-.png" alt="volumeSlower" width="20" height="20"> <!-- Bouton pour baisser le volume -->
+                        <img src="img/Bouttons/V-down.png" alt="volumeSlower" width="20" height="20"> <!-- Bouton pour baisser le volume -->
                         </button>
                         <input type="range" class="slider" id="volumeSlider" value="100"> <!-- Slider "en Range" pour ajuster le volume -->
                         <button type="button" id="btnVolumeUp">
-                            <img src="img/Bouttons/V+.png" alt="volumeUpper" width="20" height="20"> <!-- Bouton pour augmenter le volume -->
+                            <img src="img/Bouttons/V-up.png" alt="volumeUpper" width="20" height="20"> <!-- Bouton pour augmenter le volume -->
                         </button>
                     </article>
-                </section>
-            </section>
+                </div>
+            </div>
         </section>
         <section> <!-- Section pour afficher les informations sur la piste en cours -->
             <article class="slider-container2" id="trackInfo">
@@ -68,49 +68,49 @@
                     <img src="img/Cover/dream.jpg" alt="Album Cover" title="Titre"> <!-- Image de la couverture de l'album -->
                     <h2 id="trackTitle1">Dream</h2> <!-- Titre de la chanson -->
                     <p id="artistName1">El Debarge</p> <!-- Nom de l'artiste -->
-                    <audio src="Musique/El Debarge A Dream.mp3"></audio> <!-- Fichier audio de la chanson -->
+                    <audio src="Musique/El-Debarge-A-Dream.mp3"></audio> <!-- Fichier audio de la chanson -->
                 </article>
                 <article class="cover" id="gridItem2">
                     <img src="img/Cover/cherish.jpg" alt="Album Cover"> <!-- Image de la couverture de l'album -->
                     <h2 id="trackTitle2">Cherish</h2> <!-- Titre de la chanson -->
                     <p id="artistName2">Kool and The Gang</p> <!-- Nom de l'artiste -->
-                    <audio src="Musique/Kool and The Gang Cherish.mp3"></audio> <!-- Fichier audio de la chanson -->
+                    <audio src="Musique/Kool-and-The-Gang-Cherish.mp3"></audio> <!-- Fichier audio de la chanson -->
                 </article>
                 <article class="cover" id="gridItem3">
-                    <img src="img/Cover/end of the road.jpg" alt="Album Cover"> <!-- Image de la couverture de l'album -->
+                    <img src="img/Cover/end-of-the-road.jpg" alt="Album Cover"> <!-- Image de la couverture de l'album -->
                     <h2 id="trackTitle3">End of the road</h2> <!-- Titre de la chanson -->
                     <p id="artistName3">Boyz II Men</p> <!-- Nom de l'artiste -->
-                    <audio src="Musique/Boyz II Men End Of The Road.mp3"></audio> <!-- Fichier audio de la chanson -->
+                    <audio src="Musique/Boyz-II-Men-End-Of-The-Road.mp3"></audio> <!-- Fichier audio de la chanson -->
                 </article>
                 <article class="cover" id="gridItem4">
                     <img src="img/Cover/fragil.jpg" alt="Album Cover"> <!-- Image de la couverture de l'album -->
                     <h2 id="trackTitle4">Fragil</h2> <!-- Titre de la chanson -->
                     <p id="artistName4">Sting feat Stevie Wonder</p> <!-- Nom de l'artiste -->
-                    <audio src="Sting feat Stevie Wonder Fragil.mp3"></audio> <!-- Fichier audio de la chanson -->
+                    <audio src="Sting-feat-Stevie-Wonder-Fragil.mp3"></audio> <!-- Fichier audio de la chanson -->
                 </article>
                 <article class="cover" id="gridItem5">
-                    <img src="img/Cover/Back at one.jpg" alt="Album Cover"> <!-- Image de la couverture de l'album -->
+                    <img src="img/Cover/Back-at-one.jpg" alt="Album Cover"> <!-- Image de la couverture de l'album -->
                     <h2 id="trackTitle5">Back at one</h2> <!-- Titre de la chanson -->
                     <p id="artistName5">Brian McKnight</p> <!-- Nom de l'artiste -->
-                    <audio src="img/Cover/Brian McKnight Back At One.mp3"></audio> <!-- Fichier audio de la chanson -->
+                    <audio src="img/Cover/Brian-McKnight-Back-At-One.mp3"></audio> <!-- Fichier audio de la chanson -->
                 </article>
                 <article class="cover" id="gridItem6">
-                    <img src="img/Cover/you are the one.jpg" alt="Album Cover"> <!-- Image de la couverture de l'album -->
+                    <img src="img/Cover/you-are-the-one.jpg" alt="Album Cover"> <!-- Image de la couverture de l'album -->
                     <h2 id="trackTitle6">You are the one</h2> <!-- Titre de la chanson -->
                     <p id="artistName6">D Train</p> <!-- Nom de l'artiste -->
-                    <audio src="Musique/D Train Youre the One for Me.mp3"></audio> <!-- Fichier audio de la chanson -->
+                    <audio src="Musique/D-Train-Youre-the-One-for-Me.mp3"></audio> <!-- Fichier audio de la chanson -->
                 </article>
                 <article class="cover" id="gridItem7">
                     <img src="img/Cover/joanna.jpg" alt="Album Cover"> <!-- Image de la couverture de l'album -->
                     <h2 id="trackTitle7">Joanna</h2> <!-- Titre de la chanson -->
                     <p id="artistName7">Kool and The Gang</p> <!-- Nom de l'artiste -->
-                    <audio src="Musique/Kool The Gang Joanna Official Music Video.mp3"></audio> <!-- Fichier audio de la chanson -->
+                    <audio src="Musique/Kool-The-Gang-Joanna.mp3"></audio> <!-- Fichier audio de la chanson -->
                 </article>
                 <article class="cover" id="gridItem8">
-                    <img src="img/Cover/Dance with my father.jpg" alt="Album Cover"> <!-- Image de la couverture de l'album -->
+                    <img src="img/Cover/Dance-with-my-father.jpg" alt="Album Cover"> <!-- Image de la couverture de l'album -->
                     <h2 id="trackTitle8">Dance with my father</h2> <!-- Titre de la chanson -->
                     <p id="artistName8">Luther Vandross</p> <!-- Nom de l'artiste -->
-                    <audio src="Musique/Luther Vandross Dance With My Father.mp3"></audio> <!-- Fichier audio de la chanson -->
+                    <audio src="Musique/Luther-Vandross-Dance-With-My-Father.mp3"></audio> <!-- Fichier audio de la chanson -->
                 </article>
             </article>
         </section>
